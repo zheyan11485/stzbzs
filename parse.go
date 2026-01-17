@@ -384,6 +384,7 @@ func parseTeamUser(data []byte) {
 
 		// 在同盟成员消息解析成功后保存历史数据
 		if err := model.SaveGroupWuHistory(); err != nil {
+			// 只记录非 "record not found" 的错误
 			log.Printf("保存武勋历史数据失败: %v", err)
 		} else {
 			log.Println("武勋历史数据保存成功")
