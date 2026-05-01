@@ -15,10 +15,9 @@ QQ交流群：536964677(嗯，又重新建了...)
 - 队伍查询（通过同盟战报记录队伍）
 ## 构建
 1. 构建前需确保已安装 golang 1.24及以上版本、nodejs  
-2. 执行 `go mod tidy`或者`go mod download` 安装依赖
-3. 到项目的web目录下 执行 `npm install` 安装依赖
-4. 执行 `build.bat`
-5. 如无法正常执行`build.bat`,请手动执行前后端build指令。先进入web目录执行`npm run build`,然后返回项目根目录执行`go build -tags="nomsgpack" -ldflags="-s -w" -o dist\stzbHelper-windows-amd64.exe stzbHelper`
+2. `go install github.com/wailsapp/wails/v2/cmd/wails@latest`
+3. `wails build`
+
 ## 开发说明
 将`main.go`中的`isDebug`改为`true`再重新编译运行 就可以在打印中看到来自率土服务器类型为3的数据包  
 你可以在打印中寻找一些数据包来开发其他功能  

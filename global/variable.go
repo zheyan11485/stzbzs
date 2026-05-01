@@ -13,7 +13,7 @@ var ExVar = WebExVar{
 }
 
 var IsDebug bool = false
-var Version string = "0.0.3-rc2-fix2"
+var Version string = "0.0.4Beta202605011608"
 var OnlySrcIp = ""
 var OnlyDstIp = ""
 var PacketLoss = false
